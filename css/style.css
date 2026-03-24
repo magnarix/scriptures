@@ -1,0 +1,728 @@
+/* =============================================
+   Scriptures.us — Shared Stylesheet
+   ============================================= */
+
+
+/* --- Reset --- */
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* --- Base --- */
+
+html {
+    font-size: 19px;
+}
+
+body {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 400;
+    line-height: 1.82;
+    color: #1c1917;
+    background-color: #faf9f6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* --- Typography --- */
+
+h1, h2, h3 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+p {
+    max-width: 36em;
+}
+
+a {
+    color: #6b2737;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+a:hover {
+    border-bottom-color: #6b2737;
+}
+
+em {
+    font-style: italic;
+}
+
+
+/* --- Layout --- */
+
+.container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+
+/* --- Navigation --- */
+
+nav {
+    padding: 2rem 0 1.8rem;
+    border-bottom: 1px solid #ddd8d2;
+}
+
+nav .container {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.4rem 2.2rem;
+}
+
+.site-name {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: #1c1917;
+    border-bottom: none;
+    margin-right: auto;
+}
+
+.site-name:hover {
+    border-bottom: none;
+    color: #6b2737;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem 1.4rem;
+    list-style: none;
+}
+
+.nav-links a {
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #78736e;
+    border-bottom: none;
+    padding-bottom: 2px;
+}
+
+.nav-links a:hover {
+    color: #6b2737;
+    border-bottom: none;
+}
+
+.nav-links .active {
+    color: #6b2737;
+    border-bottom: 1px solid #6b2737;
+}
+
+
+/* --- Hero (homepage only) --- */
+
+.hero {
+    padding: 5.5rem 0 4.5rem;
+    text-align: center;
+}
+
+.epigraph {
+    font-style: italic;
+    font-size: 1.2rem;
+    line-height: 1.65;
+    color: #44403c;
+    max-width: 28em;
+    margin: 0 auto 0.8rem;
+}
+
+.epigraph-citation {
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-size: 0.63rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #9a9590;
+    margin-bottom: 3.5rem;
+}
+
+.hero-title {
+    font-size: 2.6rem;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    color: #1c1917;
+    margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #9a9590;
+}
+
+
+/* --- Introduction (homepage) --- */
+
+.introduction {
+    padding: 0 0 3.5rem;
+    border-bottom: 1px solid #ddd8d2;
+}
+
+.introduction p {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: #292524;
+}
+
+
+/* --- Section label --- */
+
+.section-label {
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+    font-size: 0.63rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #9a9590;
+    margin-bottom: 1.8rem;
+}
+
+
+/* --- Generic section (homepage) --- */
+
+.section {
+    padding: 3.5rem 0;
+    border-bottom: 1px solid #ddd8d2;
+}
+
+.section:last-of-type {
+    border-bottom: none;
+}
+
+.section p {
+    font-size: 1rem;
+    color: #44403c;
+    margin-bottom: 1.2rem;
+    line-height: 1.85;
+}
+
+.section p:last-child {
+    margin-bottom: 0;
+}
+
+.section-link {
+    display: inline-block;
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #6b2737;
+    margin-top: 1.2rem;
+    border-bottom: 1px solid transparent;
+}
+
+.section-link:hover {
+    border-bottom-color: #6b2737;
+}
+
+
+/* --- Recent work list (homepage) --- */
+
+.recent-work {
+    padding: 3.5rem 0;
+    border-bottom: 1px solid #ddd8d2;
+}
+
+.recent-list {
+    list-style: none;
+    margin-top: 1.8rem;
+}
+
+.recent-item {
+    display: flex;
+    align-items: baseline;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid #ece8e3;
+}
+
+.recent-item:first-child {
+    border-top: 1px solid #ece8e3;
+}
+
+.recent-category {
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #9a9590;
+    width: 6.5em;
+    flex-shrink: 0;
+}
+
+.recent-title {
+    flex: 1;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #1c1917;
+}
+
+.recent-title a {
+    color: #1c1917;
+    border-bottom: none;
+}
+
+.recent-title a:hover {
+    color: #6b2737;
+}
+
+.recent-scripture {
+    display: block;
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+    font-size: 0.63rem;
+    font-weight: 400;
+    color: #9a9590;
+    margin-top: 0.1rem;
+}
+
+.recent-date {
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+    font-size: 0.63rem;
+    font-weight: 400;
+    color: #9a9590;
+    flex-shrink: 0;
+    margin-left: 2rem;
+}
+
+
+/* --- Index pages (archives) --- */
+
+.index-header {
+    padding: 4.5rem 0 3rem;
+    border-bottom: 1px solid #ddd8d2;
+}
+
+.index-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: #1c1917;
+    margin-bottom: 1.5rem;
+}
+
+.index-description {
+    font-size: 1rem;
+    line-height: 1.85;
+    color: #44403c;
+    max-width: 36em;
+}
+
+.index-list {
+    list-style: none;
+    padding: 1.2rem 0 4.5rem;
+}
+
+.index-item {
+    display: flex;
+    align-items: baseline;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ece8e3;
+}
+
+.index-item:first-child {
+    border-top: 1px solid #ece8e3;
+}
+
+.index-item-title {
+    flex: 1;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #1c1917;
+}
+
+.index-item-title a {
+    color: #1c1917;
+    border-bottom: none;
+}
+
+.index-item-title a:hover {
+    color: #6b2737;
+}
+
+.index-item-scripture {
+    display: block;
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+    font-size: 0.63rem;
+    font-weight: 400;
+    color: #9a9590;
+    margin-top: 0.12rem;
+}
+
+.index-item-date {
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+    font-size: 0.63rem;
+    font-weight: 400;
+    color: #9a9590;
+    flex-shrink: 0;
+    margin-left: 2rem;
+}
+
+.index-empty {
+    padding: 3.5rem 0 4.5rem;
+    font-size: 1rem;
+    color: #9a9590;
+    font-style: italic;
+}
+
+
+/* --- Static pages (about, ministry, contact) --- */
+
+.page-header {
+    padding: 4.5rem 0 3rem;
+    border-bottom: 1px solid #ddd8d2;
+}
+
+.page-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: #1c1917;
+}
+
+.page-body {
+    padding: 3rem 0 4.5rem;
+}
+
+.page-body p {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: #292524;
+    max-width: 36em;
+    margin-bottom: 1.5rem;
+}
+
+.page-body p:last-child {
+    margin-bottom: 0;
+}
+
+.page-body h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1c1917;
+    margin-bottom: 0.8rem;
+    margin-top: 0;
+}
+
+.page-body .section-divider {
+    border: none;
+    border-top: 1px solid #ddd8d2;
+    margin: 2.5rem 0;
+    max-width: 36em;
+}
+
+.ministry-type {
+    margin-bottom: 2.5rem;
+}
+
+.ministry-type:last-child {
+    margin-bottom: 0;
+}
+
+.contact-email {
+    display: inline-block;
+    margin-top: 0.3rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+
+/* --- Article pages (homilies, reflections, studies, statements) --- */
+
+.article-header {
+    padding: 4.5rem 0 3rem;
+    border-bottom: 1px solid #ddd8d2;
+}
+
+.article-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2.2rem;
+}
+
+.article-category {
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+    font-size: 0.63rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #9a9590;
+}
+
+.article-category a {
+    color: #9a9590;
+    border-bottom: none;
+}
+
+.article-category a:hover {
+    color: #6b2737;
+}
+
+.article-date {
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+    font-size: 0.63rem;
+    font-weight: 400;
+    color: #9a9590;
+}
+
+.article-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    color: #1c1917;
+    margin-bottom: 1.2rem;
+    line-height: 1.18;
+}
+
+.article-scripture {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #44403c;
+    margin-bottom: 0.35rem;
+}
+
+.article-occasion {
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    color: #9a9590;
+}
+
+.article-body {
+    padding: 3.2rem 0 4.5rem;
+}
+
+.article-body p {
+    font-size: 1.08rem;
+    line-height: 1.92;
+    color: #292524;
+    max-width: 36em;
+    margin-bottom: 1.5rem;
+}
+
+.article-body p:last-child {
+    margin-bottom: 0;
+}
+
+.article-body h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1c1917;
+    margin-top: 2.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.article-body blockquote {
+    margin: 2.2rem 0 2.2rem 0;
+    padding-left: 1.5rem;
+    border-left: 2px solid #ddd8d2;
+}
+
+.article-body blockquote p {
+    font-style: italic;
+    color: #44403c;
+    font-size: 1.02rem;
+    line-height: 1.85;
+}
+
+.article-body blockquote cite {
+    display: block;
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-size: 0.68rem;
+    font-weight: 400;
+    color: #9a9590;
+    margin-top: 0.4rem;
+    letter-spacing: 0.02em;
+}
+
+.article-body .closing-divider {
+    border: none;
+    border-top: 1px solid #ddd8d2;
+    margin: 2.5rem 0;
+    max-width: 36em;
+}
+
+.article-return {
+    padding: 2.2rem 0;
+    border-top: 1px solid #ddd8d2;
+}
+
+.article-return a {
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #6b2737;
+}
+
+
+/* --- Footer --- */
+
+footer {
+    padding: 3rem 0 4rem;
+    border-top: 1px solid #ddd8d2;
+    text-align: center;
+}
+
+.footer-name {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #1c1917;
+    margin-bottom: 0.25rem;
+}
+
+.footer-tagline {
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+    font-size: 0.63rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #9a9590;
+    margin-bottom: 1.5rem;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.footer-links a {
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+    font-size: 0.63rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #78736e;
+    border-bottom: none;
+}
+
+.footer-links a:hover {
+    color: #6b2737;
+}
+
+.footer-note {
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 400;
+    color: #b0aba6;
+    margin-top: 1.5rem;
+}
+
+
+/* --- Responsive --- */
+
+@media (max-width: 600px) {
+    html {
+        font-size: 17px;
+    }
+
+    nav .container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+
+    .site-name {
+        margin-right: 0;
+    }
+
+    .nav-links {
+        gap: 0.15rem 1rem;
+    }
+
+    .hero {
+        padding: 3.5rem 0 3rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .index-header,
+    .page-header,
+    .article-header {
+        padding: 3rem 0 2.5rem;
+    }
+
+    .index-title,
+    .page-title,
+    .article-title {
+        font-size: 1.7rem;
+    }
+
+    .article-meta {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .recent-item,
+    .index-item {
+        flex-wrap: wrap;
+    }
+
+    .recent-category {
+        width: 100%;
+        margin-bottom: 0.05rem;
+    }
+
+    .recent-date,
+    .index-item-date {
+        margin-left: 0;
+        margin-top: 0.25rem;
+        width: 100%;
+    }
+}
+
+
+/* --- Print --- */
+
+@media print {
+    body {
+        background: white;
+        font-size: 11pt;
+        color: #000;
+    }
+
+    nav, .footer-links, .article-return {
+        display: none;
+    }
+
+    .hero {
+        padding: 1.5rem 0;
+    }
+
+    a {
+        color: #000;
+        border-bottom: none;
+    }
+
+    .container {
+        max-width: none;
+        padding: 0 1in;
+    }
+}
