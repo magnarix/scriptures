@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homilies — Scriptures.us</title>
+    <meta name="description" content="Preaching rooted in the liturgical readings, shaped by the occasion of the Church's worship, and offered as proclamation of the Word to the gathered assembly.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* =============================================
+           RESET & BASE
+           ============================================= */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 18px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', 'Georgia', serif;
+            font-weight: 400;
+            line-height: 1.85;
+            color: #1c1917;
+            background-color: #faf9f6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', 'Georgia', serif;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        a {
+            color: #6b2737;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: #6b2737;
+        }
+
+        .container {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* =============================================
+           NAVIGATION
+           ============================================= */
+        nav {
+            padding: 2.5rem 0 2rem;
+            border-bottom: 1px solid #e8e4df;
+        }
+
+        nav .container {
+            display: flex;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 0.5rem 2rem;
+        }
+
+        .site-name {
+            font-family: 'Cormorant Garamond', 'Georgia', serif;
+            font-size: 1.35rem;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+            color: #1c1917;
+            border-bottom: none;
+            margin-right: auto;
+        }
+
+        .site-name:hover {
+            border-bottom: none;
+            color: #6b2737;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.25rem 1.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-family: 'Inter', 'Helvetica Neue', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #6b6560;
+            border-bottom: none;
+        }
+
+        .nav-links a:hover {
+            color: #6b2737;
+            border-bottom: none;
+        }
+
+        .nav-links .active {
+            color: #6b2737;
+        }
+
+        /* =============================================
+           INDEX HEADER
+           ============================================= */
+        .index-header {
+            padding: 4rem 0 3rem;
+            border-bottom: 1px solid #e8e4df;
+        }
+
+        .index-title {
+            font-size: 2.4rem;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            color: #1c1917;
+            margin-bottom: 1.2rem;
+        }
+
+        .index-description {
+            font-size: 1.05rem;
+            color: #44403c;
+            max-width: 38em;
+        }
+
+        /* =============================================
+           INDEX LIST
+           ============================================= */
+        .index-list {
+            list-style: none;
+            padding: 1rem 0 4rem;
+        }
+
+        .index-item {
+            display: flex;
+            align-items: baseline;
+            padding: 1.1rem 0;
+            border-bottom: 1px solid #f0ece7;
+        }
+
+        .index-item:first-child {
+            border-top: 1px solid #f0ece7;
+        }
+
+        .index-item-title {
+            flex: 1;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #1c1917;
+        }
+
+        .index-item-title a {
+            color: #1c1917;
+        }
+
+        .index-item-title a:hover {
+            color: #6b2737;
+        }
+
+        .index-item-scripture {
+            display: block;
+            font-family: 'Inter', 'Helvetica Neue', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 400;
+            color: #8b8580;
+            margin-top: 0.15rem;
+        }
+
+        .index-item-date {
+            font-family: 'Inter', 'Helvetica Neue', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 400;
+            color: #8b8580;
+            flex-shrink: 0;
+            margin-left: 2rem;
+        }
+
+        /* =============================================
+           FOOTER
+           ============================================= */
+        footer {
+            padding: 3rem 0 4rem;
+            border-top: 1px solid #e8e4df;
+            text-align: center;
+        }
+
+        .footer-name {
+            font-family: 'Cormorant Garamond', 'Georgia', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1c1917;
+            margin-bottom: 0.3rem;
+        }
+
+        .footer-tagline {
+            font-family: 'Inter', 'Helvetica Neue', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 400;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: #8b8580;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .footer-links a {
+            font-family: 'Inter', 'Helvetica Neue', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #6b6560;
+            border-bottom: none;
+        }
+
+        .footer-links a:hover {
+            color: #6b2737;
+        }
+
+        .footer-note {
+            font-family: 'Inter', 'Helvetica Neue', sans-serif;
+            font-size: 0.68rem;
+            font-weight: 400;
+            color: #a8a29e;
+            margin-top: 1.5rem;
+        }
+
+        /* =============================================
+           RESPONSIVE
+           ============================================= */
+        @media (max-width: 600px) {
+            html {
+                font-size: 16px;
+            }
+
+            nav .container {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+
+            .site-name {
+                margin-right: 0;
+            }
+
+            .nav-links {
+                gap: 0.2rem 1.2rem;
+            }
+
+            .index-header {
+                padding: 3rem 0 2.5rem;
+            }
+
+            .index-title {
+                font-size: 1.85rem;
+            }
+
+            .index-item {
+                flex-wrap: wrap;
+            }
+
+            .index-item-date {
+                margin-left: 0;
+                margin-top: 0.3rem;
+                width: 100%;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                font-size: 12pt;
+            }
+
+            nav, .footer-links {
+                display: none;
+            }
+
+            a {
+                color: #1c1917;
+                border-bottom: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="/" class="site-name">Scriptures.us</a>
+            <ul class="nav-links">
+                <li><a href="/homilies/" class="active">Homilies</a></li>
+                <li><a href="/reflections/">Reflections</a></li>
+                <li><a href="/studies/">Studies</a></li>
+                <li><a href="/statements/">Statements</a></li>
+                <li><a href="/ministry/">Ministry</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- Index Header -->
+        <header class="index-header">
+            <div class="container">
+                <h1 class="index-title">Homilies</h1>
+                <p class="index-description">Preaching rooted in the liturgical readings, shaped by the occasion of the Church&rsquo;s worship, and offered as proclamation of the Word to the gathered assembly.</p>
+            </div>
+        </header>
+
+        <!-- Index List -->
+        <div class="container">
+            <ul class="index-list">
+
+                <li class="index-item">
+                    <div class="index-item-title">
+                        <a href="/homilies/the-bread-that-remains/">The Bread That Remains</a>
+                        <span class="index-item-scripture">John 6:22&ndash;40 &middot; Fifth Sunday of Lent</span>
+                    </div>
+                    <span class="index-item-date">March 22, 2026</span>
+                </li>
+
+                <li class="index-item">
+                    <div class="index-item-title">
+                        <a href="/homilies/the-voice-from-the-whirlwind/">The Voice from the Whirlwind</a>
+                        <span class="index-item-scripture">Job 38&ndash;41 &middot; Seventh Sunday in Ordinary Time</span>
+                    </div>
+                    <span class="index-item-date">February 16, 2026</span>
+                </li>
+
+                <li class="index-item">
+                    <div class="index-item-title">
+                        <a href="/homilies/the-baptism-of-the-lord/">The Baptism of the Lord</a>
+                        <span class="index-item-scripture">Mark 1:9&ndash;11 &middot; The Baptism of the Lord</span>
+                    </div>
+                    <span class="index-item-date">January 12, 2026</span>
+                </li>
+
+            </ul>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="footer-name">Scriptures.us</p>
+            <p class="footer-tagline">The Ministry of the Word in Sacred Scripture and Theological Reflection</p>
+            <ul class="footer-links">
+                <li><a href="/contact/">Contact</a></li>
+                <li><a href="/feed.xml">RSS</a></li>
+            </ul>
+            <p class="footer-note">Unless otherwise noted, all content is the original work of this ministry.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

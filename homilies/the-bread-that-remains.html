@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bread That Remains — Scriptures.us</title>
+    <meta name="description" content="A homily on John 6:22–40, preached on the Fifth Sunday of Lent.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* =============================================
+           RESET & BASE
+           ============================================= */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 18px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', 'Georgia', serif;
+            font-weight: 400;
+            line-height: 1.85;
+            color: #1c1917;
+            background-color: #faf9f6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* =============================================
+           TYPOGRAPHY
+           ============================================= */
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', 'Georgia', serif;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        a {
+            color: #6b2737;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: #6b2737;
+        }
+
+        /* =============================================
+           LAYOUT
+           ============================================= */
+        .container {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* =============================================
+           NAVIGATION
+           ============================================= */
+        nav {
+            padding: 2.5rem 0 2rem;
+            border-bottom: 1px solid #e8e4df;
+        }
+
+        nav .container {
+            display: flex;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 0.5rem 2rem;
+        }
+
+        .site-name {
+            font-family: 'Cormorant Garamond', 'Georgia', serif;
+            font-size: 1.35rem;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+            color: #1c1917;
+            border-bottom: none;
+            margin-right: auto;
+        }
+
+        .site-name:hover {
+            border-bottom: none;
+            color: #6b2737;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.25rem 1.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-family: 'Inter', 'Helvetica Neue', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #6b6560;
+            border-bottom: none;
+        }
+
+        .nav-links a:hover {
+            color: #6b2737;
+            border-bottom: none;
+        }
+
+        /* =============================================
+           ARTICLE HEADER
+           ============================================= */
+        .article-header {
+            padding: 4rem 0 3rem;
+            border-bottom: 1px solid #e8e4df;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 2rem;
+        }
+
+        .article-category {
+            font-family: 'Inter', 'Helvetica Neue', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #8b8580;
+        }
+
+        .article-category a {
+            color: #8b8580;
+            border-bottom: none;
+        }
+
+        .article-category a:hover {
+            color: #6b2737;
+        }
+
+        .article-date {
+            font-family: 'Inter', 'Helvetica Neue', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 400;
+            color: #8b8580;
+        }
+
+        .article-title {
+            font-size: 2.4rem;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            color: #1c1917;
+            margin-bottom: 1.2rem;
+            line-height: 1.2;
+        }
+
+        .article-scripture {
+            font-style: italic;
+            font-size: 1.15rem;
+            color: #44403c;
+            margin-bottom: 0.4rem;
+        }
+
+        .article-occasion {
+            font-family: 'Inter', 'Helvetica Neue', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 400;
+            letter-spacing: 0.04em;
+            color: #8b8580;
+        }
+
+        /* =============================================
+           ARTICLE BODY
+           ============================================= */
+        .article-body {
+            padding: 3rem 0 4rem;
+        }
+
+        .article-body p {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: #292524;
+            max-width: 38em;
+            margin-bottom: 1.6rem;
+        }
+
+        .article-body p:last-child {
+            margin-bottom: 0;
+        }
+
+        .article-body blockquote {
+            margin: 2rem 0 2rem 1.5rem;
+            padding-left: 1.5rem;
+            border-left: 2px solid #e8e4df;
+        }
+
+        .article-body blockquote p {
+            font-style: italic;
+            color: #44403c;
+            font-size: 1.05rem;
+        }
+
+        .article-body blockquote cite {
+            display: block;
+            font-family: 'Inter', 'Helvetica Neue', sans-serif;
+            font-style: normal;
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: #8b8580;
+            margin-top: 0.5rem;
+            letter-spacing: 0.02em;
+        }
+
+        .article-body h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1c1917;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* =============================================
+           ARTICLE FOOTER / RETURN
+           ============================================= */
+        .article-return {
+            padding: 2.5rem 0;
+            border-top: 1px solid #e8e4df;
+        }
+
+        .article-return a {
+            font-family: 'Inter', 'Helvetica Neue', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #6b2737;
+        }
+
+        /* =============================================
+           FOOTER
+           ============================================= */
+        footer {
+            padding: 3rem 0 4rem;
+            border-top: 1px solid #e8e4df;
+            text-align: center;
+        }
+
+        .footer-name {
+            font-family: 'Cormorant Garamond', 'Georgia', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1c1917;
+            margin-bottom: 0.3rem;
+        }
+
+        .footer-tagline {
+            font-family: 'Inter', 'Helvetica Neue', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 400;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: #8b8580;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .footer-links a {
+            font-family: 'Inter', 'Helvetica Neue', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #6b6560;
+            border-bottom: none;
+        }
+
+        .footer-links a:hover {
+            color: #6b2737;
+        }
+
+        .footer-note {
+            font-family: 'Inter', 'Helvetica Neue', sans-serif;
+            font-size: 0.68rem;
+            font-weight: 400;
+            color: #a8a29e;
+            margin-top: 1.5rem;
+        }
+
+        /* =============================================
+           RESPONSIVE
+           ============================================= */
+        @media (max-width: 600px) {
+            html {
+                font-size: 16px;
+            }
+
+            nav .container {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+
+            .site-name {
+                margin-right: 0;
+            }
+
+            .nav-links {
+                gap: 0.2rem 1.2rem;
+            }
+
+            .article-header {
+                padding: 3rem 0 2.5rem;
+            }
+
+            .article-title {
+                font-size: 1.85rem;
+            }
+
+            .article-meta {
+                flex-direction: column;
+                gap: 0.3rem;
+            }
+        }
+
+        /* =============================================
+           PRINT
+           ============================================= */
+        @media print {
+            body {
+                background: white;
+                font-size: 12pt;
+            }
+
+            nav, .footer-links, .article-return {
+                display: none;
+            }
+
+            a {
+                color: #1c1917;
+                border-bottom: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="/" class="site-name">Scriptures.us</a>
+            <ul class="nav-links">
+                <li><a href="/homilies/">Homilies</a></li>
+                <li><a href="/reflections/">Reflections</a></li>
+                <li><a href="/studies/">Studies</a></li>
+                <li><a href="/statements/">Statements</a></li>
+                <li><a href="/ministry/">Ministry</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- Article Header -->
+        <header class="article-header">
+            <div class="container">
+                <div class="article-meta">
+                    <span class="article-category"><a href="/homilies/">Homily</a></span>
+                    <span class="article-date">March 22, 2026</span>
+                </div>
+                <h1 class="article-title">The Bread That Remains</h1>
+                <p class="article-scripture">John 6:22&ndash;40</p>
+                <p class="article-occasion">Fifth Sunday of Lent</p>
+            </div>
+        </header>
+
+        <!-- Article Body -->
+        <article class="article-body">
+            <div class="container">
+                <p>The crowd crosses the sea because they have eaten. Not because they have understood, but because they have eaten. John is careful about this: they saw the signs, they filled their stomachs, and now they follow. What drives them across the water is not faith but appetite&mdash;the memory of bread that appeared without explanation and satisfied without cost.</p>
+
+                <p>Jesus knows this. He names it directly, without softening: &ldquo;You seek me, not because you saw signs, but because you ate your fill of the loaves.&rdquo; There is no rebuke more penetrating than the one that simply describes what is true. He does not condemn their hunger. He does not fault them for wanting bread. He tells them that what they want is not large enough for what he intends to give.</p>
+
+                <p>This is the movement of the entire discourse that follows&mdash;a relentless deepening. The crowd asks for bread; Jesus offers himself. They ask for a sign like manna; he says he is the sign, and more than the sign. They want what sustained their ancestors in the wilderness for a day; he speaks of food that endures to eternal life. At every point the conversation is the same: they reach for what is familiar, and he draws them past it into something they did not know they needed.</p>
+
+                <blockquote>
+                    <p>Do not labour for the food which perishes, but for the food which endures to eternal life, which the Son of man will give to you.</p>
+                    <cite>John 6:27</cite>
+                </blockquote>
+
+                <p>The verb is important: <em>labour</em>. The Greek is &epsilon;&rho;&gamma;&alpha;&zeta;&epsilon;&sigma;&theta;&epsilon;&mdash;work, toil, expend effort. Jesus does not say &ldquo;do not eat&rdquo; or &ldquo;do not desire.&rdquo; He speaks to the direction of labor, the orientation of the will. Every life is organized around some form of bread&mdash;some sustaining thing toward which all effort flows. The question the discourse presses is not whether you will labor, but for what. What bread are you crossing the sea to find?</p>
+
+                <p>The crowd, understandably, hears this as instruction. If there is a higher bread, tell us what to do to obtain it. &ldquo;What must we do, to be doing the works of God?&rdquo; It is the most natural question in the world, and Jesus&rsquo; answer overturns everything they expect: &ldquo;This is the work of God, that you believe in him whom he has sent.&rdquo; The work of God is not a work at all, not in the sense they mean. It is not a task to be completed or a discipline to be mastered. It is a turning&mdash;a reorientation of trust toward the one who stands before them, dripping with the ordinary appearance of a Galilean teacher, claiming to be the bread of heaven.</p>
+
+                <p>We are not so different from this crowd. We come to Scripture, to the Church, to prayer, because we have been fed before and we want to be fed again. There is nothing wrong with this. But the Lord who feeds us is always pressing us past the feeding toward the one who feeds&mdash;past the gift toward the giver, past the bread toward the Bread. The entire sacramental life of the Church is built on this movement: the material sign that carries you into the immaterial reality, the visible bread that becomes the invisible Presence.</p>
+
+                <p>What remains when the meal is over&mdash;when the baskets are gathered, when the crowd disperses, when the ordinary life resumes&mdash;is not the bread. What remains is the Lord who gave it, and the question of whether we will labor for what perishes or for what endures. The discourse in John 6 will grow harder before it is finished. The bread will become flesh; the teaching will become intolerable; many will walk away. But the question is already here, in these opening verses, before the scandal arrives: Do you want what I gave you, or do you want me?</p>
+
+                <p>That question does not belong only to a crowd by the Sea of Galilee. It belongs to every communicant who approaches the altar, every reader who opens this book, every soul that has ever been sustained by grace and must decide whether the sustenance is the point or the Sustainer is. The bread that remains is not a thing. It is a Person. And he is asking whether you have come for the bread, or for him.</p>
+            </div>
+        </article>
+
+        <!-- Return link -->
+        <div class="article-return">
+            <div class="container">
+                <a href="/homilies/">&larr; All Homilies</a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="footer-name">Scriptures.us</p>
+            <p class="footer-tagline">The Ministry of the Word in Sacred Scripture and Theological Reflection</p>
+            <ul class="footer-links">
+                <li><a href="/contact/">Contact</a></li>
+                <li><a href="/feed.xml">RSS</a></li>
+            </ul>
+            <p class="footer-note">Unless otherwise noted, all content is the original work of this ministry.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
