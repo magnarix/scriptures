@@ -390,21 +390,21 @@ body:not(.book-mode) .pagebar { display: none; }
 @keyframes bob { 0%,100%{ transform: translateY(0); opacity:.7 } 50%{ transform: translateY(6px); opacity:1 } }
 
 /* Contents on cover */
-.contents { position: relative; z-index: 1; max-width: 44rem; margin: 0 auto; padding: clamp(3rem,8vw,5rem) 1.5rem 4rem; }
+.contents { position: relative; z-index: 1; max-width: 44rem; margin: 0 auto; padding: clamp(2rem,5vw,3rem) 1.5rem 3.5rem; }
 .contents h2 { text-align: center; font-family: var(--display); font-weight: 600;
   font-size: clamp(1.7rem,5vw,2.3rem); letter-spacing: .04em; color: var(--ink); margin: 0 0 .4rem; }
-.contents .sub { text-align: center; color: var(--muted); font-style: italic; margin: 0 0 2.6rem; }
-.toc-part { margin: 2.2rem 0 .4rem; }
-.toc-part .lbl { font-family: var(--display); font-size: .86rem; letter-spacing: .28em;
+.contents .sub { text-align: center; color: var(--muted); font-style: italic; margin: 0 0 1.6rem; }
+.toc-part { margin: 1.15rem 0 .25rem; }
+.toc-part .lbl { font-family: var(--display); font-size: .95rem; letter-spacing: .26em;
   text-transform: uppercase; color: var(--accent); font-weight: 600; }
-.toc-part .nm { font-family: var(--display); font-style: italic; color: var(--muted); font-size: 1.05rem; margin-left: .6rem; }
+.toc-part .nm { font-family: var(--display); font-style: italic; color: var(--muted); font-size: 1.18rem; margin-left: .6rem; }
 .toc-list { list-style: none; margin: 0; padding: 0; }
 .toc-list li { border-bottom: 1px solid var(--rule-soft); }
-.toc-list a { display: flex; align-items: baseline; gap: 1rem; padding: .85rem .4rem; color: var(--ink);
+.toc-list a { display: flex; align-items: baseline; gap: 1rem; padding: .52rem .4rem; color: var(--ink);
   transition: color .18s, padding-left .18s; }
 .toc-list a:hover { color: var(--accent); padding-left: .7rem; }
-.toc-list .num { font-family: var(--display); color: var(--muted); min-width: 1.8em; text-align: right; font-size: 1.08rem; }
-.toc-list .title { flex: 1; font-family: var(--display); font-size: 1.28rem; }
+.toc-list .num { font-family: var(--display); color: var(--muted); min-width: 1.8em; text-align: right; font-size: 1.2rem; }
+.toc-list .title { flex: 1; font-family: var(--display); font-size: 1.44rem; }
 .toc-list .title.special { font-style: italic; }
 .toc-list .dots { flex: 1; border-bottom: 1px dotted var(--rule); transform: translateY(-.25em); margin: 0 .3rem; opacity:.6; }
 
