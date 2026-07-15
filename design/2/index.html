@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Answered Prayers — Clean White Editorial</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%95%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+<style>
+  :root{
+    --paper:#faf9f6;
+    --paper-2:#f4f2ec;
+    --ink:#16130f;          /* near-black body ink */
+    --ink-soft:#2a2620;
+    --muted:#57514a;        /* metadata, >=4.5:1 on paper */
+    --gold:#9a7b3f;         /* refined accent */
+    --gold-line:#b8944e;
+    --rule:#dcd7cc;
+    --measure:35rem;        /* ~64ch reading measure */
+    --serif-display:"Fraunces",Georgia,"Times New Roman",serif;
+    --serif-body:"Newsreader",Georgia,"Times New Roman",serif;
+  }
+
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--serif-body);
+    font-size:21px;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  img{max-width:100%}
+
+  /* ---------- Design switcher ---------- */
+  .switcher{
+    position:sticky;top:0;z-index:60;
+    background:rgba(250,249,246,.92);
+    -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--rule);
+  }
+  .switcher__in{
+    max-width:72rem;margin:0 auto;
+    display:flex;align-items:center;gap:.35rem 1rem;flex-wrap:wrap;
+    padding:.6rem 1.2rem;
+    font-family:var(--serif-body);
+  }
+  .switcher a{color:var(--ink-soft);text-decoration:none}
+  .switcher .all{
+    font-size:.9rem;font-weight:500;white-space:nowrap;
+    padding:.25rem .1rem;border-bottom:1px solid transparent;
+  }
+  .switcher .all:hover{border-bottom-color:var(--gold-line)}
+  .nums{display:flex;gap:.2rem;flex-wrap:wrap}
+  .nums a{
+    display:inline-flex;align-items:center;justify-content:center;
+    min-width:1.9rem;height:1.9rem;padding:0 .35rem;
+    font-size:.85rem;border-radius:999px;
+    color:var(--muted);
+  }
+  .nums a:hover{background:var(--paper-2);color:var(--ink)}
+  .nums a.active{
+    background:var(--ink);color:var(--paper);font-weight:500;
+  }
+  .switcher .label{
+    margin-left:auto;font-size:.82rem;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--muted);white-space:nowrap;
+  }
+
+  /* ---------- Shared layout ---------- */
+  .wrap{max-width:72rem;margin:0 auto;padding:0 1.6rem}
+
+  /* small section-divider label between the two mocks */
+  .divider{
+    max-width:72rem;margin:0 auto;padding:0 1.6rem;
+  }
+  .divider__in{
+    display:flex;align-items:center;gap:1.2rem;
+    padding:2.4rem 0;
+  }
+  .divider__in::before,.divider__in::after{
+    content:"";height:1px;flex:1;background:var(--rule);
+  }
+  .divider__label{
+    font-family:var(--serif-body);
+    font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;
+    color:var(--muted);white-space:nowrap;
+  }
+
+  .section-tag{
+    display:block;text-align:center;
+    font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;
+    color:var(--gold);margin-bottom:.4rem;
+  }
+
+  /* ---------- COVER ---------- */
+  .cover{
+    min-height:85vh;
+    display:flex;flex-direction:column;justify-content:center;
+    position:relative;
+    padding:6vh 0 7vh;
+  }
+  .cover__frame{
+    max-width:44rem;margin:0 auto;width:100%;
+    padding:0 1.6rem;text-align:center;
+  }
+  .imprint{
+    font-size:.8rem;letter-spacing:.34em;text-transform:uppercase;
+    color:var(--muted);margin:0 0 2.4rem;
+  }
+  /* thin gold hairline motif */
+  .hair{
+    width:3.5rem;height:1px;margin:0 auto 2.4rem;
+    background:var(--gold-line);
+  }
+  .cover__title{
+    font-family:var(--serif-display);
+    font-optical-sizing:auto;
+    font-weight:300;
+    font-size:clamp(3.6rem,15vw,9rem);
+    line-height:.94;
+    letter-spacing:-.015em;
+    margin:0;
+    color:var(--ink);
+  }
+  .cover__title em{
+    font-style:italic;font-weight:400;
+  }
+  .cover__sub{
+    font-family:var(--serif-body);
+    font-style:italic;
+    font-size:clamp(1.15rem,3.4vw,1.6rem);
+    line-height:1.45;
+    color:var(--ink-soft);
+    margin:1.6rem auto 0;max-width:30rem;
+  }
+  .cover__author{
+    font-size:.95rem;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--muted);margin:2.2rem 0 0;
+  }
+
+  .epigraph{
+    max-width:32rem;margin:3.2rem auto 0;
+    position:relative;padding-top:2.4rem;
+  }
+  .epigraph::before{
+    content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);
+    width:2.5rem;height:1px;background:var(--rule);
+  }
+  .epigraph p{
+    font-family:var(--serif-body);
+    font-style:italic;
+    font-size:1.08rem;line-height:1.65;
+    color:var(--ink-soft);margin:0;
+  }
+  .epigraph cite{
+    display:block;font-style:normal;
+    font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--muted);margin-top:1rem;
+  }
+
+  .actions{
+    display:flex;flex-wrap:wrap;gap:.8rem;justify-content:center;
+    margin-top:3.4rem;
+  }
+  .btn{
+    font-family:var(--serif-body);
+    font-size:1rem;line-height:1;
+    padding:.95rem 1.7rem;
+    border-radius:2px;
+    text-decoration:none;
+    border:1px solid var(--ink);
+    transition:background .2s,color .2s,border-color .2s;
+    letter-spacing:.02em;
+  }
+  .btn--primary{
+    background:var(--ink);color:var(--paper);
+  }
+  .btn--primary:hover{background:#000;border-color:#000}
+  .btn--ghost{
+    background:transparent;color:var(--ink-soft);border-color:var(--rule);
+  }
+  .btn--ghost:hover{border-color:var(--gold-line);color:var(--ink)}
+
+  /* ---------- READING VIEW ---------- */
+  .reading{
+    background:var(--paper);
+    padding:1rem 0 6rem;
+  }
+  .page{
+    max-width:var(--measure);
+    margin:0 auto;
+    padding:0 1.6rem;
+  }
+  .page__head{
+    text-align:center;
+    padding:2.4rem 0 2.8rem;
+    border-bottom:1px solid var(--rule);
+    margin-bottom:2.8rem;
+  }
+  .kicker{
+    font-size:.74rem;letter-spacing:.28em;text-transform:uppercase;
+    color:var(--gold);margin:0 0 1.6rem;
+  }
+  .eyebrow{
+    font-size:.82rem;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--muted);margin:0 0 .9rem;
+  }
+  .chapter-title{
+    font-family:var(--serif-display);
+    font-weight:300;font-optical-sizing:auto;
+    font-size:clamp(2.2rem,7vw,3.4rem);
+    line-height:1.05;letter-spacing:-.01em;
+    margin:0;color:var(--ink);
+  }
+  .read-meta{
+    font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--muted);margin:1.4rem 0 0;
+  }
+
+  .page p{
+    margin:0 0 1.5rem;
+    color:var(--ink);
+    font-size:1.32rem;      /* ~21px body reading text */
+    line-height:1.72;
+  }
+  /* drop cap + lead */
+  .lead{position:relative}
+  .lead::first-letter{
+    font-family:var(--serif-display);
+    font-weight:400;
+    float:left;
+    font-size:4.6rem;
+    line-height:.78;
+    padding:.3rem .7rem .1rem 0;
+    color:var(--ink);
+  }
+  .lead::first-line{
+    /* subtle small-caps feel on the opening line */
+    letter-spacing:.005em;
+  }
+
+  blockquote{
+    margin:2.6rem 0;
+    padding:0 0 0 1.6rem;
+    border-left:2px solid var(--gold-line);
+  }
+  blockquote p{
+    font-family:var(--serif-body);
+    font-style:italic;
+    font-size:1.34rem;line-height:1.6;
+    color:var(--ink-soft);
+    margin:0 0 .8rem;
+  }
+  blockquote cite{
+    display:block;font-style:normal;
+    font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--muted);
+  }
+
+  .end-mark{
+    text-align:center;margin:3.2rem 0 0;color:var(--gold);
+    font-size:1.1rem;letter-spacing:.4em;
+  }
+
+  footer{
+    border-top:1px solid var(--rule);
+    padding:2.4rem 1.6rem;
+    text-align:center;
+  }
+  footer p{
+    font-size:.82rem;letter-spacing:.1em;color:var(--muted);margin:.2rem 0;
+  }
+
+  /* ---------- Dark preference support ---------- */
+  @media (prefers-color-scheme:dark){
+    :root{
+      --paper:#111010;
+      --paper-2:#1a1917;
+      --ink:#f3efe7;
+      --ink-soft:#d8d2c6;
+      --muted:#a49c8e;
+      --gold:#cba85f;
+      --gold-line:#b8944e;
+      --rule:#332f29;
+    }
+    .switcher{background:rgba(17,16,16,.92)}
+    .nums a.active{background:var(--ink);color:var(--paper)}
+    .btn--primary{background:var(--ink);color:var(--paper)}
+    .btn--primary:hover{background:#fff;border-color:#fff}
+    .btn{border-color:var(--ink-soft)}
+    .btn--ghost{color:var(--ink-soft)}
+  }
+
+  @media (max-width:640px){
+    body{font-size:20px}
+    .page p{font-size:1.25rem}
+    .switcher .label{display:none}
+    .cover{min-height:82vh}
+    .lead::first-letter{font-size:3.8rem}
+  }
+</style>
+</head>
+<body>
+
+  <!-- ===== Design switcher ===== -->
+  <nav class="switcher" aria-label="Design switcher">
+    <div class="switcher__in">
+      <a class="all" href="../">← All Designs</a>
+      <div class="nums">
+        <a href="../1/">1</a>
+        <a href="../2/" class="active" aria-current="page">2</a>
+        <a href="../3/">3</a>
+        <a href="../4/">4</a>
+        <a href="../5/">5</a>
+        <a href="../6/">6</a>
+        <a href="../7/">7</a>
+        <a href="../8/">8</a>
+        <a href="../9/">9</a>
+        <a href="../10/">10</a>
+      </div>
+      <span class="label">Design 2 — Clean White Editorial</span>
+    </div>
+  </nav>
+
+  <!-- ===== COVER ===== -->
+  <header class="cover">
+    <div class="cover__frame">
+      <p class="imprint">Basilius Magnus Ministry</p>
+      <div class="hair" aria-hidden="true"></div>
+      <h1 class="cover__title">Answered<br><em>Prayers</em></h1>
+      <p class="cover__sub">What God Really Says When We Ask</p>
+      <p class="cover__author">Rev. Basilius Magnus</p>
+
+      <figure class="epigraph">
+        <p>“This poor man cried out, and the LORD heard him, and saved him out of all his troubles.”</p>
+        <cite>Psalm 34:6 · NKJV</cite>
+      </figure>
+
+      <div class="actions">
+        <a class="btn btn--primary" href="#read">Begin Reading</a>
+        <a class="btn btn--ghost" href="#">Download PDF</a>
+        <a class="btn btn--ghost" href="#">Download EPUB</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Section divider ===== -->
+  <div class="divider">
+    <div class="divider__in">
+      <span class="divider__label">Book Page · Reading View</span>
+    </div>
+  </div>
+
+  <!-- ===== READING VIEW ===== -->
+  <main class="reading" id="read">
+    <article class="page">
+      <span class="section-tag">The Reading Experience</span>
+
+      <div class="page__head">
+        <p class="kicker">Part I · The Asking</p>
+        <p class="eyebrow">Chapter One</p>
+        <h2 class="chapter-title">God Is Not a<br>Vending Machine</h2>
+        <p class="read-meta">≈ 15 min read</p>
+      </div>
+
+      <p class="lead">The assumption was simple: prayer was for getting things from God. This chapter exists to unsay it. Prayer is communion with God, and every petition belongs inside that communion; reverse the order and prayer eventually collapses. Nobody ever sat me down and taught me the false version, and if you had asked me then whether God was a dispenser of favors, I would have been offended. But watch what a man does and you will learn his real theology.</p>
+
+      <p>A vending machine is an honest piece of engineering, and I mean it no insult. You put in exact change, you press the code, and the thing drops into the tray. The whole transaction is over in a minute, and neither party owes the other anything further. For years, without ever saying so, that was my working picture of prayer. Faith was the coinage. The promises of Scripture were the codes I punched in. God, somewhere behind the glass, was the mechanism obliged to deliver.</p>
+
+      <p>I tried the transaction for the first time as a boy. A piece of schoolwork was due the next morning, and half of it had beaten me flat. So I took a cross, set it on top of the unfinished work, and said, “Jesus, I want you to finish my work. I’m going to shower now, and when I return, I should see the work completed.” I came back clean and hopeful, and the disappointment dropped on me like cold water: the work sat exactly as I had left it.</p>
+
+      <blockquote>
+        <p>“Therefore do not be like them. For your Father knows the things you have need of before you ask Him.”</p>
+        <cite>Matthew 6:8 · NKJV</cite>
+      </blockquote>
+
+      <p>That sentence unmakes every transactional theory of prayer. Jesus removes the coins, the codes, and the glass, and where the machine stood He sets a Person who knew you first.</p>
+
+      <div class="end-mark" aria-hidden="true">✦</div>
+    </article>
+  </main>
+
+  <footer>
+    <p>Answered Prayers · Rev. Basilius Magnus</p>
+    <p>Basilius Magnus Ministry · © 2026</p>
+  </footer>
+
+</body>
+</html>

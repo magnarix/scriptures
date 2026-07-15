@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design Proposals · Answered Prayers</title>
+<meta name="description" content="Ten design proposals for the Answered Prayers book website — pick your favorite.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%95%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Source+Serif+4:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --bg:#f5f0e6; --panel:#fffdf8; --ink:#211d18; --ink-soft:#4a4238;
+    --muted:#6f6555; --line:#e2d8c4; --accent:#9a5a2c; --accent-2:#b8863f;
+    --shadow:rgba(60,45,20,.10); --shadow-lg:rgba(60,45,20,.16);
+    --serif:'Source Serif 4',Georgia,serif; --display:'Fraunces',Georgia,serif;
+  }
+  @media (prefers-color-scheme:dark){:root{
+    --bg:#15130e; --panel:#1e1b14; --ink:#f0e8d6; --ink-soft:#d3c9b3;
+    --muted:#a2947a; --line:#332c20; --accent:#e0a95c; --accent-2:#d4a24f;
+    --shadow:rgba(0,0,0,.5); --shadow-lg:rgba(0,0,0,.6);
+  }}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);
+    font-size:1.15rem;line-height:1.7;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1120px;margin:0 auto;padding:clamp(2.4rem,6vw,5rem) clamp(1.2rem,4vw,2.4rem) 5rem}
+  header.intro{text-align:center;max-width:44rem;margin:0 auto clamp(2.4rem,5vw,3.6rem)}
+  .kick{font-family:var(--display);font-weight:600;letter-spacing:.28em;text-transform:uppercase;
+    font-size:.82rem;color:var(--accent);margin:0 0 1rem}
+  h1{font-family:var(--display);font-weight:700;font-size:clamp(2.4rem,6vw,3.8rem);
+    line-height:1.06;margin:0 0 .5rem;letter-spacing:-.01em}
+  h1 em{font-style:italic;color:var(--accent)}
+  .lede{font-size:1.24rem;color:var(--ink-soft);margin:1.1rem 0 0}
+  .note{margin:1.6rem auto 0;max-width:40rem;font-size:1.02rem;color:var(--muted)}
+  .note b{color:var(--ink-soft);font-weight:600}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:clamp(1rem,2.4vw,1.6rem)}
+  .card{position:relative;display:flex;flex-direction:column;background:var(--panel);
+    border:1px solid var(--line);border-radius:16px;padding:1.6rem 1.6rem 1.5rem;
+    box-shadow:0 1px 2px var(--shadow);transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;overflow:hidden}
+  .card:hover{transform:translateY(-4px);box-shadow:0 18px 40px var(--shadow-lg);border-color:var(--accent-2)}
+  .card .sw{height:6px;border-radius:99px;margin:-.2rem 0 1.1rem;background:linear-gradient(90deg,var(--c1),var(--c2))}
+  .num{font-family:var(--display);font-weight:700;font-size:2.6rem;line-height:1;color:var(--accent);opacity:.9}
+  .name{font-family:var(--display);font-weight:600;font-size:1.42rem;line-height:1.15;margin:.5rem 0 .1rem}
+  .mood{font-size:.9rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 .7rem}
+  .desc{font-size:1.04rem;color:var(--ink-soft);margin:0 0 1.3rem;flex:1}
+  .go{align-self:flex-start;display:inline-flex;align-items:center;gap:.5rem;font-family:var(--display);
+    font-weight:600;font-size:1.02rem;color:var(--accent);border-bottom:2px solid transparent;padding-bottom:2px}
+  .card:hover .go{border-bottom-color:var(--accent)}
+  .go svg{width:18px;height:18px}
+  footer{text-align:center;margin-top:3.4rem;color:var(--muted);font-size:1rem}
+  footer a{color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="intro">
+    <p class="kick">Answered Prayers · Website Design</p>
+    <h1>Ten ways to hold <em>this book</em></h1>
+    <p class="lede">Each proposal shows a full <b>cover</b> and a real <b>reading page</b>, built around one promise: text you can read without strain, and a cover worthy of the book.</p>
+    <p class="note">Open any proposal, then use the numbered bar at the top of that page to flip between all ten. When one feels right, just tell me its <b>number</b> — I’ll rebuild the whole site in that direction.</p>
+  </header>
+
+  <div class="grid">
+    <a class="card" href="1/" style="--c1:#c9a24a;--c2:#8a5a2c">
+      <span class="sw"></span><span class="num">1</span>
+      <h2 class="name">Warm Paper Classic</h2>
+      <p class="mood">Timeless · Intimate</p>
+      <p class="desc">A cherished heirloom book. Cream paper, near-black ink, a single quiet light motif. Cormorant Garamond &amp; Spectral.</p>
+      <span class="go">View proposal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </a>
+    <a class="card" href="2/" style="--c1:#1f1b16;--c2:#b8863f">
+      <span class="sw"></span><span class="num">2</span>
+      <h2 class="name">Clean White Editorial</h2>
+      <p class="mood">Modern · Literary</p>
+      <p class="desc">The confident restraint of a fine publishing house — bright white, dramatic scale, one gold hairline. Fraunces &amp; Newsreader.</p>
+      <span class="go">View proposal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </a>
+    <a class="card" href="3/" style="--c1:#14161a;--c2:#d8ac57">
+      <span class="sw"></span><span class="num">3</span>
+      <h2 class="name">Elegant Night</h2>
+      <p class="mood">Cinematic · Reverent</p>
+      <p class="desc">Crying out in darkness, and light answering. Deep charcoal, warm off-white text, a glow of gold descending. Cormorant &amp; Spectral.</p>
+      <span class="go">View proposal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </a>
+    <a class="card" href="4/" style="--c1:#2a3a6a;--c2:#e8a35c">
+      <span class="sw"></span><span class="num">4</span>
+      <h2 class="name">Dawn — Light Breaking</h2>
+      <p class="mood">Hopeful · Painterly</p>
+      <p class="desc">Night melting into morning gold — answered at daybreak. A dawn-gradient cover, then a calm light reading page. Fraunces &amp; Source Serif.</p>
+      <span class="go">View proposal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </a>
+    <a class="card" href="5/" style="--c1:#7a6a48;--c2:#c9a24a">
+      <span class="sw"></span><span class="num">5</span>
+      <h2 class="name">Literary Hardcover</h2>
+      <p class="mood">Weighty · Printed</p>
+      <p class="desc">A clothbound keepsake, foil-stamped title, ornamental drop cap. Large, dark, beautifully typeset. EB Garamond &amp; Cormorant.</p>
+      <span class="go">View proposal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </a>
+    <a class="card" href="6/" style="--c1:#4a5a72;--c2:#d9b871">
+      <span class="sw"></span><span class="num">6</span>
+      <h2 class="name">Devotional Calm</h2>
+      <p class="mood">Tender · Still</p>
+      <p class="desc">The hush before you pray. Soft dusk-blue and cream, a single candle-flame of light, everything an exhale. Fraunces &amp; Source Serif.</p>
+      <span class="go">View proposal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </a>
+    <a class="card" href="7/" style="--c1:#1c1a17;--c2:#a8412a">
+      <span class="sw"></span><span class="num">7</span>
+      <h2 class="name">Bold Contemporary</h2>
+      <p class="mood">Arresting · Confident</p>
+      <p class="desc">A modern bestseller that stops you cold — a huge heavy title, one vivid accent. Scale as emotion. Fraunces, Archivo &amp; Source Serif.</p>
+      <span class="go">View proposal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </a>
+    <a class="card" href="8/" style="--c1:#8a5a2c;--c2:#c9a24a">
+      <span class="sw"></span><span class="num">8</span>
+      <h2 class="name">A Letter from the Author</h2>
+      <p class="mood">Personal · Warm</p>
+      <p class="desc">Like a heartfelt handwritten letter. Sepia paper, brown-black ink, one line penned in script. Source Serif, Cormorant &amp; Dancing Script.</p>
+      <span class="go">View proposal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </a>
+    <a class="card" href="9/" style="--c1:#14120c;--c2:#e6c163">
+      <span class="sw"></span><span class="num">9</span>
+      <h2 class="name">Sacred — Gold on Ink</h2>
+      <p class="mood">Luminous · Iconographic</p>
+      <p class="desc">Gold leaf on an illuminated page. A radiant halo of light crowns the title; the reading page turns to warm ivory. Cormorant &amp; Spectral.</p>
+      <span class="go">View proposal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </a>
+    <a class="card" href="10/" style="--c1:#4c6b4a;--c2:#c9a24a">
+      <span class="sw"></span><span class="num">10</span>
+      <h2 class="name">Living Vine</h2>
+      <p class="mood">Alive · Growing</p>
+      <p class="desc">Abiding in the vine, new growth after long waiting. Muted sage and cream, a delicate vine framing the title. Fraunces &amp; Newsreader.</p>
+      <span class="go">View proposal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </a>
+  </div>
+
+  <footer>
+    Answered Prayers · <em>What God Really Says When We Ask</em> · Rev. Basilius Magnus<br>
+    Tell me a number and I’ll rebuild <a href="https://scriptures.us">scriptures.us</a> in that design.
+  </footer>
+</div>
+</body>
+</html>
