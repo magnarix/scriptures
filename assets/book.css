@@ -266,6 +266,14 @@ article { max-width: var(--measure); margin: 0 auto; }
 .site-foot a { color: var(--muted); }
 .site-foot a:hover { color: var(--accent); }
 .site-foot .sep { margin: 0 .55em; opacity: .5; }
+.foot-dl { margin-bottom: 1.4rem; }
+.dl-link {
+  display: inline-block;
+  font-family: var(--display); font-size: .95rem; letter-spacing: .06em;
+  padding: .55rem 1.3rem; border: 1px solid var(--rule); border-radius: 999px;
+  color: var(--ink-soft) !important; transition: border-color .2s, color .2s, background .2s;
+}
+.dl-link:hover { border-color: var(--accent); color: var(--accent) !important; background: color-mix(in srgb, var(--accent) 7%, transparent); }
 
 /* =========================================================
    COVER
