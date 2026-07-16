@@ -176,7 +176,7 @@ body::before {
 .chapter-head .eyebrow[style] { /* keep inline min-read note readable */ color: var(--muted); }
 
 .prose { padding-bottom: 1rem; }
-.prose p { margin: 0; text-indent: 1.3em; hyphens: auto; -webkit-hyphens: auto; }
+.prose p { margin: 0; text-indent: 1.3em; hyphens: none; -webkit-hyphens: none; }
 .prose p.lead { text-indent: 0; }
 /* no indent on the first paragraph after a break */
 .prose blockquote + p, .prose .scene-break + p { text-indent: 0; }
