@@ -342,6 +342,35 @@ body:not(.book-mode) .pagebar { display: none; }
 }
 .plate > * { position: relative; z-index: 2; }
 
+/* image-jacket variant: the printed cover tipped into the cloth boards */
+.plate.plate-img { margin: 0 auto;
+  width: min(29rem, calc((100svh - 19rem) * 2 / 3 + 2.6rem));
+  max-width: 100%; padding: clamp(.9rem, 2.2vw, 1.4rem); }
+.plate.plate-img::before { inset: 7px; }
+.plate-img .cover-img { display: block; height: auto; border-radius: 2px;
+  width: 100%; margin: 0 auto;
+  box-shadow: 0 2px 10px rgba(0,0,0,.45), 0 0 0 1px rgba(0,0,0,.35); }
+.plate-img .cta-row { margin-top: 1.1rem; }
+.plate-img .dl-row { margin-top: .6rem; padding-bottom: .2rem; }
+
+/* epigraph on the home page (the book's own epigraph leaf) */
+.home-epigraph { position: relative; z-index: 1; padding: clamp(1.8rem,5vw,2.8rem) 1.5rem 0; }
+.home-epigraph blockquote { max-width: 30rem; margin: 0 auto; text-align: center;
+  font-family: var(--garamond); font-style: italic; color: var(--muted);
+  font-size: 1.12rem; line-height: 1.65; }
+.home-epigraph cite { display: block; margin-top: .7rem; font-style: normal;
+  font-family: var(--display); letter-spacing: .16em; text-transform: uppercase;
+  font-size: .76rem; color: var(--accent); }
+
+/* back cover, closing the home page like the back board of the book */
+.backcover { position: relative; z-index: 1; display: grid; place-items: center;
+  padding: clamp(1.2rem,4vw,2rem) 1.5rem clamp(2.6rem,6vw,3.6rem); }
+
+/* author portrait on the About page */
+.prose .author-photo { text-align: center; margin: .2rem 0 1.8rem; text-indent: 0; }
+.prose .author-photo img { width: min(10.5rem, 55%); height: auto; border-radius: 50%;
+  box-shadow: 0 10px 26px -12px rgba(30,15,18,.5), 0 0 0 4px var(--bg-panel), 0 0 0 5px var(--rule); }
+
 .emblem { color: var(--foil); margin: 0 auto clamp(.9rem,3vw,1.2rem); display: block;
   filter: drop-shadow(0 1px 0 rgba(0,0,0,.5)) drop-shadow(0 -1px 0 rgba(255,230,190,.22)); }
 .emblem svg { width: clamp(40px, 9vw, 50px); height: auto; display: block; margin: 0 auto; }
